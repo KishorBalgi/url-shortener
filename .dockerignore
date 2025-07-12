@@ -1,0 +1,30 @@
+# Node
+node_modules
+npm-debug.log
+pnpm-lock.yaml
+yarn.lock
+
+# TypeScript
+dist
+*.tsbuildinfo
+
+# Git
+.git
+.gitignore
+
+# Docker
+.dockerignore
+Dockerfile
+
+# Local environment
+.env
+.env.*
+
+# IDEs
+.vscode
+.idea
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
