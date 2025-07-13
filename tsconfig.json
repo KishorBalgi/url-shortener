@@ -11,7 +11,8 @@
       "@services/*": ["services/*"],
       "@middlewares/*": ["middlewares/*"],
       "@models/*": ["models/*"],
-      "@utils/*": ["utils/*"]
+      "@utils/*": ["utils/*"],
+      "@jobs/*": ["jobs/*"]
     }
   },
   "include": ["src/**/*"],

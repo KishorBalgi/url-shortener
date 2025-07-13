@@ -4,6 +4,7 @@ export interface IUrl {
   _id: ObjectId;
   urlKey: string;
   redirectUrl: string;
+  visitCount: number;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -18,6 +19,10 @@ const UrlSchema = new Schema<IUrl>(
     redirectUrl: {
       type: String,
       required: [true, "Long URL required"],
+    },
+    visitCount: {
+      type: Number,
+      default: 0,
     },
   },
   {

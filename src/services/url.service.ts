@@ -15,7 +15,7 @@ const createShortUrl = async (url: Partial<IUrl>): Promise<IUrl> => {
 
   const newUrl = await Url.create(url);
 
-  return newUrl;
+  return newUrl.toObject();
 };
 
 const getRedirectUrl = async (urlKey: string): Promise<IUrl | null> => {
@@ -26,7 +26,24 @@ const getRedirectUrl = async (urlKey: string): Promise<IUrl | null> => {
   return url;
 };
 
+const updateVisitCount = async (
+  urlKey: string,
+  count: number
+): Promise<void> => {
+  await Url.findOneAndUpdate(
+    {
+      urlKey: urlKey,
+    },
+    {
+      $inc: {
+        visitCount: count,
+      },
+    }
+  );
+};
+
 export default {
   createShortUrl,
   getRedirectUrl,
+  updateVisitCount,
 };
