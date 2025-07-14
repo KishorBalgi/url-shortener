@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(
   rateLimiter({
     windowSize: 60,
-    maxRequests: 5,
+    maxRequests: 100,
   })
 );
 
