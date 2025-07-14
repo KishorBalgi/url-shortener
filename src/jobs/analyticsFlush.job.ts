@@ -2,7 +2,7 @@ import cron from "node-cron";
 import urlService from "@services/url.service";
 import { getRedisClient } from "@config/redis";
 
-const FLUSH_INTERVAL = "*/1 * * * *";
+const FLUSH_INTERVAL = "*/5 * * * *";
 
 cron.schedule(FLUSH_INTERVAL, async () => {
   try {
