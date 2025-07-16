@@ -22,6 +22,12 @@ A URL shortener service built with Node.js, TypeScript, Express, MongoDB, and Re
 - **Job Scheduling**: node-cron for background tasks
 - **Development**: Nodemon for hot reloading
 
+## 📊 System Design
+
+<!-- Link image from assets/ folder-->
+
+![System Design](assets/system-design-diagram.png)
+
 ## 📁 Project Structure
 
 ```
